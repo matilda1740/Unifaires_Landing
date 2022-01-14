@@ -1,5 +1,5 @@
 {
-  "name": "@UnifairsLanding",
+  "name": "UnifairsLanding",
   "version": "10.0.1",
   "private": true,
   "main": "firebaseFunctions.js",
