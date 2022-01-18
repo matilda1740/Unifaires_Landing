@@ -28,7 +28,7 @@ export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* <link rel="icon" href="/favicon.png" /> */}</Head>
+        <Head><link rel="icon" href="/logo.png" /></Head>
         <body>
           <Main />
           <NextScript />
