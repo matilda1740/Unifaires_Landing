@@ -52,7 +52,7 @@ export const AppWrapper = styled.div`
   min-height: 100vh;
 // FIXME: Remove me when the I'm fully responsive😆
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 
