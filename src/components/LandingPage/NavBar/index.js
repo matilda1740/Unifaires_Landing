@@ -273,9 +273,11 @@ const NavBar = () => {
             <NavLink to="/sign-up" activeStyle>
               Pricing
             </NavLink>
-            <NavLink to="/sign-up" activeStyle>
-              Contact
-            </NavLink>
+            <Link href="/contact">
+              <NavLink to="/sign-up" activeStyle>
+                Contact
+              </NavLink>
+            </Link>
           </NavMenu>
 
           <NavBtn>
