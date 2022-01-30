@@ -8,7 +8,7 @@ import circle from "../../../public/images/circles.svg";
 const TitleContainer = styled.div`
   background: white;
   padding-top: 100px;
-  padding-bottom: 0px;
+  padding-bottom: 40px;
   position: relative;
 `;
 
@@ -50,7 +50,7 @@ const PopularTopicsStyles = styled.div`
 const PopularTopics = () => {
   return (
     <>
-      <TitleContainer className="container">
+      <TitleContainer className="container ptb-100">
         <HeadingText>Popular Topics</HeadingText>
         <FlexContainer>
           <>
@@ -64,6 +64,7 @@ const PopularTopics = () => {
           </Text>
         </FlexContainer>
       </TitleContainer>
+
       <PopularTopicsStyles className="pb-100">
         {/* TODO: Build out the actual components */}
         <div className="topic__box">

@@ -112,7 +112,7 @@ const BoxRightText = styled(BoxText)`
 `;
 const PopularInstructurs = () => {
   return (
-    <ContainerStyle className=" pb-100 container">
+    <ContainerStyle className=" ptb-100 container">
       <HeadingText>Popular Instructors</HeadingText>
       <FlexContainer>
         <>
