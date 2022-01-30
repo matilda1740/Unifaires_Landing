@@ -23,6 +23,7 @@ const PopularTopicsStyles = styled.div`
   align-items: center;
   gap: 20px;
   .topic__box {
+    cursor: pointer;
     width: 232px;
     height: 152px;
     background: rgba(192, 118, 84, 0.2);
@@ -33,6 +34,12 @@ const PopularTopicsStyles = styled.div`
     gap: 20px;
     padding: 0 15px;
     flex-direction: column;
+    -webkit-transition: 0.5s;
+    &:hover {
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
   }
   .pri {
     background: rgba(88, 50, 218, 0.2);
