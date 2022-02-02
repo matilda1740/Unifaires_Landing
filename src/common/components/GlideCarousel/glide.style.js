@@ -20,7 +20,8 @@ import {
 
 // Glide wrapper style
 const GlideWrapper = styled.div`
-  ${width}
+  /* width: 1200px; */
+  /* ${width} */
   ${height}
   ${space}
 `;

@@ -27,7 +27,7 @@ export default function AppCreative() {
       <Fragment>
         <Head>
           <title>
-            UNIFAIRES| Future-proof learning with career opportunities
+            UNIFAIRES | Future-proof learning with career opportunities
           </title>
           <meta
             name="Description"
@@ -44,6 +44,10 @@ export default function AppCreative() {
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Work+Sans"
+            rel="stylesheet"
+          ></link>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'
             rel="stylesheet"
           ></link>
         </Head>

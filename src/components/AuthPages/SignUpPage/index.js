@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, {  Fragment, useState, useRef } from 'react';
 import Link from 'next/link';
-
 import { signup } from 'common/data/appData';
 
 import IndividualStepOne  from '../SignUpPage/IndividualStepOne';
@@ -15,47 +14,40 @@ const SignUpPage = () => {
   const [individual, setIndividual] = useState()
   const [business, setBusiness] = useState()
   
+  const [formStep, setFormStep] = useState(0);
+  const [formType, setFormType] = useState("individual");
 
-  const handleSignUpType = (e) => {
-    e.preventDefault();
-    
-    if(e.target.value === "individual"){
-      setIndividual(true)
-      setBusiness(false)
-    }else if(e.target.value === "business"){
-      setBusiness(true)
-      setIndividual(false)
-    }
+  const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
+  const prevFormStep = () => setFormStep((currentStep) => currentStep - 1);
 
-    // return {...state, signUpType:type}
-  }
-  const handleSteps = (e) => {
-    e.preventDefault();
-    // let currentStep = state.currentStep;
-    // currentStep = currentStep === 1 ? 2 : 1
-    // setState(() => {
-    //   return 
-    // }{currentStep:currentStep}, () => console.log("Next", state))   
-    // // const nextStep = (steps) => {
- 
-    // // }
+  const handleSignUpType = (type) => {
+    // console.log(type)
+    setFormType((currentType) => currentType=type)
+    setFormStep((currentStep) => currentStep=0)
   }
 
-  console.log(individual, business)
- if(business){
-    return(<BusinessStepOne handleBusiness={handleSignUpType}/>);
-  } else {
-    return(<IndividualStepOne handleSignUpType={handleSignUpType}/>);
-  }
-  // return (
-  //   <>
-  //     {
-  //       individual === true? 
-  //       <IndividualStepOne handleSignUpType={handleSignUpType}/>
-  //       : business &&
-  //       <BusinessStepOne handleBusiness={handleSignUpType}/>
-  //     }
-  //   </>
-  // );
+  console.log(formStep, formType)
+
+  return (
+    <div formtype={formType} currentStep={formStep} prevFormStep={prevFormStep} >
+      {
+        formType === "individual" && 
+        formStep === 0 && (
+          <IndividualStepOne handleSignUpType={handleSignUpType} formStep={formStep} nextFormStep={nextFormStep} formtype={formType}/>)
+      }
+      {
+        formType === "individual" && 
+        formStep === 1 && 
+        (<IndividualStepTwo formStep={formStep} prevFormStep={prevFormStep} handleSignUpType={handleSignUpType} formtype={formType}/>)
+        }
+      {
+        formType === "business" && 
+        formStep === 0 && (<BusinessStepOne handleSignUpType={handleSignUpType} formStep={formStep} nextFormStep={nextFormStep}/>)
+      }
+      {formType === "business" && 
+        formStep === 1 && (<BusinessStepTwo handleSignUpType={handleSignUpType} formStep={formStep} nextFormStep={nextFormStep}/>)
+      }      
+    </div>
+  );
 }
 export default SignUpPage;

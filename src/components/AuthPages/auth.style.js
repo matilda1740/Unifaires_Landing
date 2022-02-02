@@ -3,9 +3,18 @@ import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
     padding: 50px 0;
-    background-color:rgba(127, 17, 224, 0.05);
-    background: linear-gradient(to right, rgba(127, 17, 224, 0.05) 66.666666%, #5832DA 33.333333%);
-    font-family: Maison Neue;
+    /* background-color:rgba(127, 17, 224, 0.05); */
+    /* background: linear-gradient(to right, rgba(127, 17, 224, 0.05) 66.666666%, #5832DA 33.333333%); */
+    background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666666%, #5832DA 33.333333%), url('/Group.svg');
+
+    .show_form{
+      display: block;
+
+    }
+    .hide_form{
+      display: none;
+    }
+    /* font-family: Maison Neue; */
   @media only screen and (max-width: 1366px) {
     padding: 60px 0;
   }

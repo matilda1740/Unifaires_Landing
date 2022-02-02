@@ -36,7 +36,7 @@ const LoginCard = () => {
           </div>                    
           </CardFormRow>
           <CardFormRow>
-              <button type="submit">Complete Signup</button>
+              <button type="submit">Complete Sign In</button>
           </CardFormRow>                     
       </form>
       <CardFormRow className="auth_footer card_footer">

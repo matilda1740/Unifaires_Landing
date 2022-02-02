@@ -14,10 +14,13 @@ import instagram from 'common/assets/images/socials/instagram.svg'
 import twitter from 'common/assets/images/socials/twitter.svg'
 import youtube from 'common/assets/images/socials/youtube.svg'
 
+import emailIcon from 'public/images/email.svg'
+import msgChatIcon from 'public/images/messages_chat.svg'
+
 import { contactCard } from 'common/data/appData';
 
 const ContactSection = () => {
-  const { slogan, title, description, heading, logo} = contactCard;
+  const { slogan, title, description, heading, logo, email, msgChat} = contactCard;
   const [state, setState] = useState({
   });
   
@@ -32,21 +35,43 @@ const ContactSection = () => {
     <SectionWrapper id="contact_page_section">
       <ContactArea>
           <ContactAreaLeft>
-              <div className="logo_area" >
+              {/* <div className="logo_area" >
                 <img src={logo?.src} alt="Unifaires" /> 
-              </div> 
+              </div>  */}
               <div className="contact_heading_div">
                 <Heading className="slogan"  as="h5" content={slogan} />
                 <Heading className="sub_slogan"  as="h5" content={title} />
                 <Text as="p" content={description} />
               </div>
 
-              <div className="socials_div" >
+              <div className="contact_info_div">
+                <div className="each_contact_info">
+                  <div className="eci_left">
+                    <img src={emailIcon?.src} alt="Email" /> 
+                  </div>
+                  <div className="eci_right">
+                    <Text as="p" content={email.heading} />
+                    <Text as="p" content={email.date} />
+                    <Text as="p" content={email.link} />
+                  </div>
+                </div>
+                <div className="each_contact_info">
+                  <div className="eci_left">
+                    <img src={msgChatIcon?.src} alt="Message" /> 
+                  </div>
+                  <div className="eci_right">
+                    <Text as="p" content={msgChat.heading} />
+                    <Text as="p" content={msgChat.date} />
+                    <Text as="p" content={msgChat.link} />
+                  </div>   
+                </div>             
+              </div>
+              {/* <div className="socials_div" >
                 <img src={facebook?.src} alt="Facebook" /> 
                 <img src={twitter?.src} alt="Twitter" /> 
                 <img src={instagram?.src} alt="Instagram" /> 
                 <img src={youtube?.src} alt="YouTube" /> 
-              </div>
+              </div> */}
           </ContactAreaLeft>
           <ContactAreaRight>
               <ContactCard>

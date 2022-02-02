@@ -5,7 +5,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 export const GlobalStyle = createGlobalStyle`
   body {    
-    font-family: 'Maison Neue';
+    font-family: 'Lato', sans-serif;
   }
   h1,
   h2,
@@ -13,7 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Maison Neue';
+    font-family: 'Lato', sans-serif;
+    ${'' /* font-family: 'Maison Neue'; */}
   }
   section {
     position: relative;
@@ -25,7 +26,9 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 400 !important;
       font-size: 30px !important;
       line-height: 125% !important;
-      font-family: 'Maison Neue';
+    font-family: 'Lato', sans-serif;
+
+      ${'' /* font-family: 'Maison Neue'; */}
   }
   .reusecore__button {
     font-weight: 500;

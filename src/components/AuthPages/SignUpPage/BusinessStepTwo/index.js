@@ -8,24 +8,24 @@ import {ContactAreaLeft,ContactAreaRight,CardFormRow} from '../../../ContactPage
 import SectionWrapper, {BackgroundArea, SignUpCard, AuthCardCol} from '../../auth.style';
 import { signup } from 'common/data/appData';
 
-const BusinessStepTwo = () => {
+const BusinessStepTwo = ({formtype, formStep, nextFormStep, handleSignUpType}) => {
   const { heading} = signup;
   const [state, setState] = useState({
   });
   
-  const handleContactChange = () => {
-  };
+  const handleTypeChange = (e) => { handleSignUpType(e.target.value)
+  }
 
   const handleContactSubmit = async (e) => {
       e.preventDefault();
   };
 
   return (
-    <SignUpCard className="signup_card">
+    <SignUpCard className={formStep === 1 ? "signup_card show_form" : "signup_card hide_form"}>
     <Heading  as="h5" content={heading} />
     <CardFormRow className="selection_row">
     <label htmlFor="signup_type">As and</label>
-    <select name="signup_type" className="selection_box">
+    <select onChange={handleTypeChange} name="signup_type" className="selection_box">
         <option value="business" defaultValue>Business</option>
         <option value="individual">Individual</option>
     </select>
@@ -67,7 +67,7 @@ const BusinessStepTwo = () => {
         </CardFormRow>
                 
         <CardFormRow>
-        <button type="submit">Proceed</button>
+        <button type="submit">Complete Sign Up</button>
         </CardFormRow>                     
     </form>
     <CardFormRow className="auth_footer card_footer">

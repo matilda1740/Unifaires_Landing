@@ -14,24 +14,25 @@ import youtube from 'common/assets/images/socials/youtube.svg'
 
 import { signup } from 'common/data/appData';
 
-const IndividualStepTwo = () => {
+const IndividualStepTwo = ({formtype, formStep, prevFormStep, handleSignUpType}) => {
   const { slogan, title, description, heading, logo} = signup;
   const [state, setState] = useState({
   });
   
-  const handleContactChange = () => {
-  };
+  const handleTypeChange = (e) => {
+    handleSignUpType(e.target.value)
+  }
 
-  const handleContactSubmit = async (e) => {
+  const handleContactSubmit = (e) => {
       e.preventDefault();
   };
 
   return (
-        <SignUpCard className="signup_card">
+        <SignUpCard className={formStep === 1 ? "signup_card show_form" : "signup_card hide_form"}>
             <Heading  as="h5" content={heading} />
             <CardFormRow className="selection_row">
             <label htmlFor="signup_type">As and</label>
-            <select name="signup_type" className="selection_box">
+            <select onChange={handleTypeChange} name="signup_type" className="selection_box">
                 <option value="individual" defaultValue>Individual</option>
                 <option value="business">Business</option>
             </select>

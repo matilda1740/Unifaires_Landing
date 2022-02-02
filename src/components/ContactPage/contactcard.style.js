@@ -3,9 +3,10 @@ import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
   padding: 50px 0;
-  background-color:rgba(127, 17, 224, 0.05);
-font-family: Maison Neue;
-  @media only screen and (max-width: 1366px) {
+  
+  /* background-color:rgba(127, 17, 224, 0.05); */
+    background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666667%, rgba(127, 17, 224, 0.05) 33.333333%), url('/Group.svg');
+      @media only screen and (max-width: 1366px) {
     padding: 60px 0;
   }
   @media only screen and (max-width: 667px) {
@@ -19,7 +20,7 @@ export const ContactArea = styled.div`
   height: 700px;
   margin: 0px auto 0 auto;
   display: flex;
-
+  /* background-color: #F7F5FD; */
   /* background-color: #ffffff; */
   @media only screen and (max-width: 667px) {
     overflow: hidden;
@@ -35,7 +36,9 @@ export const ContactArea = styled.div`
 
 export const ContactAreaLeft = styled.div`
   width: 60%;
-  height: 100%;
+  /* height: 100%; */
+  height: 60%;
+  align-self: center;
   display:flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,21 +47,53 @@ export const ContactAreaLeft = styled.div`
   /* padding-bottom: 150px; */
 
   .contact_heading_div{
+    margin-top: 80px;
+    h5{
+      color: #5832DA;
+      font-size: 48px;
+      line-height: 45px;
+    }
+    .sub_slogan{
+      color: rgba(88, 50, 218, 0.5)
+    }
+    p{
+      font-size: 20px;
+      color:#12355B;
+      opacity: 0.5;
+      line-height: 150%;
+    }
+  }
+  .contact_info_div {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 20px 0px;
+    margin: 20px 0;
+
+    p:first-child{
+      color: #5832DA;
+    }
+    p:first-child, p:nth-of-type(3){
+      font-size: 20px;
+  line-height: 120%;
+    }
+    p:nth-of-type(2){ 
+  color: rgba(18, 53, 91, 0.5);
+  font-size: 16px;
+  line-height: 120%;
+    }
 
   }
-  h5{
-    color: #5832DA;
-    font-size: 48px;
-    line-height: 45px;
-  }
-  .sub_slogan{
-    color: rgba(88, 50, 218, 0.5)
-  }
-  p{
-    font-size: 20px;
-    color:#12355B;
-    opacity: 0.5;
-    line-height: 150%;
+  .each_contact_info{
+      padding: 20px 0;
+        display: flex;
+      flex-direction: row;
+      height: 50%;
+  }  
+  .eci_right{
+    margin-left: 20px;
   }
   .socials_div {
     /* margin-top: 50; */
@@ -80,12 +115,13 @@ export const ContactAreaRight = styled.div`
 `;
 
 export const ContactCard = styled.div`
+  background: #F7F5FD;
   max-width: 608px;
   height: 640px;
   padding: 20px;
   border-radius: 24px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
-  background-color: #F7F5FD;
+  /* background-color: #F7F5FD; */
   padding: 50px;
   h5{
     color: #5832DA;
