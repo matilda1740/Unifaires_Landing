@@ -9,7 +9,7 @@ import Card from "../components/Card";
 
 const ResultStyles = styled.div`
   margin-bottom: 70px;
-  padding-top: 40px;
+  padding-top: 100px;
   .header {
     h1 {
       font-weight: bold;

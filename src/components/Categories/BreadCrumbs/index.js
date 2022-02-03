@@ -5,7 +5,8 @@ import styled from "styled-components";
 import BreadIcon from "../../../public/images/bread.svg";
 
 const BreadCrumbStyles = styled.div`
-  padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   .category-nav {
     display: flex;
     align-items: center;
@@ -34,7 +35,7 @@ const BreadCrumbStyles = styled.div`
 `;
 export default function BreadCrums() {
   return (
-    <BreadCrumbStyles className="container">
+    <BreadCrumbStyles>
       <div className="category-nav">
         <div className="main-category">
           <p>Design</p>
