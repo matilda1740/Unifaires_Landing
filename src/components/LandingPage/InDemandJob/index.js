@@ -65,7 +65,7 @@ const FlexBox = styled.div`
 
 const Box = styled.div`
   min-width: 384px;
-  min-height: 336px;
+  min-height: 510px;
   @media screen and (max-width: 768px) {
     width: 384px;
   }
@@ -106,17 +106,16 @@ const InnerWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  max-width: 384px;
+  /* max-width: 384px; */
   padding-top: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
 `;
 const BottomWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 384px;
-  padding: 24px;
+  padding: 15px 25px;
 `;
 const LeftInnerWrapper = styled.div`
   display: flex;
@@ -143,8 +142,10 @@ const BoxHeader = styled.p`
 const BoxText = styled.p`
   font-size: 16px;
   line-height: 150%;
+  max-height: 64px;
   color: #808080;
   opacity: 0.9;
+  overflow-y: scroll;
 `;
 const BoxButton = styled.button`
   width: 152px;
@@ -195,7 +196,7 @@ const ChooseUs = () => {
             <FlexBox>
               <Box>
                 <Flex>
-                  <NextImage src={jobOne} alt="image" />
+                  <img src="./images/job1.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Meta</BoxButton>
@@ -209,7 +210,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <Text>40 Applicants</Text>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -220,7 +221,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxTwo>
                 <Flex>
-                  <NextImage src={jobTwo} alt="image" />
+                  <img src="./images/job2.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Google</BoxButton>
@@ -235,7 +236,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -246,7 +247,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={jobThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>
@@ -260,7 +261,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -271,7 +272,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={jobThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>
@@ -285,7 +286,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
