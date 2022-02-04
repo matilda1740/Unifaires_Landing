@@ -17,6 +17,8 @@ import { DrawerProvider } from "common/contexts/DrawerContext";
 import NavBar from "components/LandingPage/NavBar";
 import Footer from "components/LandingPage/Footer";
 import DegreeCourse from "components/Categories/DegreeCourse";
+import Funding from "components/Categories/Funding";
+
 export default function CategoriesPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -60,6 +62,7 @@ export default function CategoriesPage() {
             </Fade>
             <Jobs />
             <DegreeCourse />
+            <Funding />
           </ContentWrapper>
           <Footer />
         </AppWrapper>

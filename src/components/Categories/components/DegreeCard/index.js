@@ -8,7 +8,7 @@ import dollar from "../../../../public/images/Dollar.svg";
 
 const CardStyles = styled.div`
   width: 400px;
-  height: 570px;
+  height: 560px;
   background: rgba(88, 50, 218, 0.05);
   border-radius: 32px;
   display: flex;
@@ -19,7 +19,7 @@ const CardStyles = styled.div`
   }
 
   .wrapper {
-    padding: 0 30px;
+    padding: 0 15px;
 
     .tag-wrapper {
       display: flex;
@@ -48,6 +48,13 @@ const CardStyles = styled.div`
       font-size: 20px;
       color: #5832da;
       padding-bottom: 10px;
+      -webkit-transition: 0.5s;
+      &:hover {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+
+        cursor: pointer;
+      }
     }
     .desc {
       font-size: 14px;
@@ -58,7 +65,7 @@ const CardStyles = styled.div`
       display: flex;
       gap: 40px;
       align-items: center;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
 
       .weeks {
         display: flex;
@@ -94,6 +101,12 @@ const CardStyles = styled.div`
     font-weight: 600;
     font-size: 16px;
     color: #ffffff;
+    -webkit-transition: 0.5s;
+    &:hover {
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
   }
 `;
 export default function Card() {
@@ -129,7 +142,7 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <button>Find out more</button>
+      <button className="default-btn">Find out more</button>
     </CardStyles>
   );
 }

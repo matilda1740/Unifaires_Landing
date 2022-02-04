@@ -5,9 +5,9 @@ import Fade from "react-reveal/Fade";
 // icon
 import SettingIcon from "../../../public/images/Setting.svg";
 import Dropdown from "../Dropdown";
-import DegreeCard from "../components/DegreeCard";
+import FundingItem from "../components/FundingItem";
 
-const DegreeCourseStyles = styled.div`
+const FundingStyles = styled.div`
   margin-bottom: 70px;
   padding-top: 50px;
   .header {
@@ -84,17 +84,18 @@ const DegreeCourseStyles = styled.div`
   }
   .result-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     @media screen {
     }
     grid-gap: 40px;
   }
 `;
+
 export default function index() {
   return (
-    <DegreeCourseStyles className="container">
+    <FundingStyles className="container">
       <div className="header">
-        <h1>Degree, Courses & Certifications</h1>
+        <h1>Funding, Grants & Scholarships</h1>
       </div>
       <div className="subheaderWrapper">
         <h6>
@@ -103,7 +104,7 @@ export default function index() {
         </h6>
         <div className="right-section">
           <Label for="exampleCustomSwitch" className="form-check-label">
-            <p>Short Courses Alerts</p>
+            <p>Certifications and Licenses Alerts</p>
           </Label>
           <div className="form-check form-switch">
             <Input type="switch" name="customSwitch" id="exampleCustomSwitch" />
@@ -112,11 +113,9 @@ export default function index() {
         </div>
       </div>
       <div className="filter-section">
-        <Dropdown title="course TITLE" />
-        <Dropdown title="course level" />
-        <Dropdown title="course MODE" />
-        <Dropdown title="EXPERTISE & SKILLS" />
-        <Dropdown title="SKILL MODE" />
+        <Dropdown title="area of focus" />
+        <Dropdown title="vendor" />
+        <Dropdown title="training & exam reg." />
         <Dropdown title="Language" />
       </div>
       <div className="pagination">
@@ -134,14 +133,21 @@ export default function index() {
       <div className="result-section">
         {/* build  card component and reuse it */}
         <Fade up delay={100}>
-          <DegreeCard />
-          <DegreeCard />
-          <DegreeCard />
-          <DegreeCard />
-          <DegreeCard />
-          <DegreeCard />
+          {/* FIXME: Build th funding area card or rather list section */}
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
+          <FundingItem />
         </Fade>
       </div>
-    </DegreeCourseStyles>
+    </FundingStyles>
   );
 }

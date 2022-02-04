@@ -140,7 +140,8 @@ export default function index() {
           <Card />
           <Card />
           <Card />
-          <Card />{" "}
+          <Card />
+          <Card />
         </Fade>
       </div>
     </ResultStyles>

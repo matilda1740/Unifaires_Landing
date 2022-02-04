@@ -29,6 +29,13 @@ const BreadCrumbStyles = styled.div`
         color: #000000;
         font-weight: 500;
         cursor: pointer;
+        -webkit-transition: 0.5s;
+        &:hover {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+          cursor: pointer;
+          color: #5832da;
+        }
       }
     }
   }
