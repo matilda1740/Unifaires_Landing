@@ -3,12 +3,7 @@ import styled from "styled-components";
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
 import Fade from "react-reveal/Fade";
-import NextImage from "common/components/NextImage";
-// Icons
-import jobOne from "../../../public/images/job1.svg";
-import jobTwo from "../../../public/images/job2.svg";
-import jobThree from "../../../public/images/cardthree.svg";
-import adoptionImage from "../../../public/images/adoptionImage.svg";
+
 import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
@@ -142,10 +137,13 @@ const BoxHeader = styled.p`
 const BoxText = styled.p`
   font-size: 16px;
   line-height: 150%;
-  max-height: 64px;
   color: #808080;
   opacity: 0.9;
-  overflow-y: scroll;
+  width: 384px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 const BoxButton = styled.button`
   width: 152px;
@@ -154,6 +152,7 @@ const BoxButton = styled.button`
   border-radius: 30px;
   border: none;
   color: white;
+  font-weight: 500;
   margin-bottom: 10px;
 `;
 const Button = styled.button`
