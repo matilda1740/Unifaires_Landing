@@ -25,9 +25,15 @@ const KeyFeatures = () => {
     <ContainerStyle className=" ptb-100 container">
       <Fade up delay={100}>
         <FlexContainer>
-          <InfoCard />
-          <InfoCard />
-          <InfoCard />
+          <InfoCard title="Apply to the right job" image="./images/info.svg" />
+          <InfoCard
+            title="Define your career path"
+            image="./images/info2.svg"
+          />
+          <InfoCard
+            title="Master the required skills"
+            image="./images/info3.svg"
+          />
         </FlexContainer>
       </Fade>
     </ContainerStyle>

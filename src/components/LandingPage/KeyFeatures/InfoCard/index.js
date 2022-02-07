@@ -61,12 +61,12 @@ const InfoStyles = styled.div`
     color: #ffffff;
   }
 `;
-export default function InfoCard() {
+export default function InfoCard({ title, image }) {
   return (
     <InfoStyles>
       <h6>For Educational Organizations</h6>
-      <header>Define your career path</header>
-      <img src="./images/info.svg" alt="image" />
+      <header>{title}</header>
+      <img src={image} alt="image" />
       <div className="desc">
         <p>
           Define your career path for yourself, or chart a great territory
