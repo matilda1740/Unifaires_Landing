@@ -176,6 +176,7 @@ const ChooseUs = () => {
     setDisplay(true);
   }, []);
   return (
+    // FIXME:  Add reusable components make it more clean just use the props
     <ContainerStyle className=" ptb-100 container">
       <HeadingText>In-Demand Jobs</HeadingText>
       <FlexContainer>
