@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
     padding: 50px 0;
+<<<<<<< HEAD
     background-color:rgba(127, 17, 224, 0.05);
     background: linear-gradient(to right, rgba(127, 17, 224, 0.05) 66.666666%, #5832DA 33.333333%);
     font-family: Maison Neue;
@@ -12,6 +13,18 @@ const SectionWrapper = styled.section`
   @media only screen and (max-width: 667px) {
     padding: 45px 0;
   }
+=======
+    background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666666%, #5832DA 33.333333%), url('/Group.svg');
+    .show_form{
+      display: block;
+    }
+    .hide_form{
+      display: none;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 812px){
+    background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666666%, rgba(127, 17, 224, 0.05) 33.333333%), url('/Group.svg');
+    }
+>>>>>>> 405e831 (Mobile Responsive Pages)
 
 `;
 
@@ -45,24 +58,37 @@ export const BackgroundArea = styled.div`
   .forgot_card .card_footer {
     /* margin-top: -15px; */
   }
-  /* background-color: #ffffff; */
-  @media only screen and (max-width: 667px) {
-    overflow: hidden;
-    /* margin-bottom: -40px;
-    width: calc(100% + 60px);
-    margin-left: -30px; */
+    @media only screen and (min-width: 320px) and (max-width: 812px){
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    .auth_bg_left, .auth_bg_right{
+    width: 100%;
+  } 
+  .contact_heading_div {
+    margin-top: 40px !important;
   }
-  @media only screen and (max-width: 480px) {
-    /* width: calc(100% + 40px);
-    margin-left: -20px; */
+  .contact_heading_div h5 {
+      /* color: #5832DA; */
+      font-size: 25px !important;
+      line-height: 25px !important;
   }
+  .logo_area, .socials_div{
+    display: none;
+  }
+  .auth_card, .signup_card{
+    width: 100%;
+  }
+}
+
 `;
 
 export const SignUpCard = styled.div`
   margin: 0 150px 0 0;
   max-width: 608px;
   /* height: 640px; */
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 24px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
   background-color: #F7F5FD;

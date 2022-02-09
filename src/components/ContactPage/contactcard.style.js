@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
   padding: 50px 0;
+<<<<<<< HEAD
   background-color:rgba(127, 17, 224, 0.05);
 font-family: Maison Neue;
   @media only screen and (max-width: 1366px) {
@@ -12,6 +13,9 @@ font-family: Maison Neue;
     padding: 45px 0;
   }
 
+=======
+  background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666667%, rgba(127, 17, 224, 0.05) 33.333333%), url('/Group.svg');
+>>>>>>> 405e831 (Mobile Responsive Pages)
 `;
 export const ContactArea = styled.div`
   max-width: 1200px;
@@ -19,6 +23,7 @@ export const ContactArea = styled.div`
   height: 700px;
   margin: 0px auto 0 auto;
   display: flex;
+<<<<<<< HEAD
 
   /* background-color: #ffffff; */
   @media only screen and (max-width: 667px) {
@@ -26,22 +31,35 @@ export const ContactArea = styled.div`
     /* margin-bottom: -40px;
     width: calc(100% + 60px);
     margin-left: -30px; */
+=======
+  @media only screen and (min-width: 320px) and (max-width: 812px){
+    height: 100%;
+    flex-direction: column;  
+  .contact_heading_div {
+    margin-top: 40px !important;
+>>>>>>> 405e831 (Mobile Responsive Pages)
   }
-  @media only screen and (max-width: 480px) {
-    /* width: calc(100% + 40px);
-    margin-left: -20px; */
+  .contact_heading_div h5 {
+      /* color: #5832DA; */
+      font-size: 25px !important;
+      line-height: 25px !important;
   }
+}
 `;
 
 export const ContactAreaLeft = styled.div`
   width: 60%;
+<<<<<<< HEAD
   height: 100%;
+=======
+  height: 60%;
+  align-self: center;
+>>>>>>> 405e831 (Mobile Responsive Pages)
   display:flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
   margin-right:5%;
-  /* padding-bottom: 150px; */
 
   .contact_heading_div{
 
@@ -71,12 +89,23 @@ export const ContactAreaLeft = styled.div`
   cursor: pointer;
   transform: scale(1.15)
 }
+  @media only screen and (min-width: 320px) and (max-width: 812px){
+    height: 300px;
+    width: 100%;
+    padding: 0px 30px;
+    .contact_info_div{
+      display:none;
+    }
+  }
 `;
 
 export const ContactAreaRight = styled.div`
   width: 45%;
   height: 100%;
   margin: 50px auto 0 auto;
+
+  @media only screen and (min-width: 320px) and (max-width: 812px){
+    width: 100%;
 `;
 
 export const ContactCard = styled.div`
@@ -151,11 +180,15 @@ label{
 
 }
 input, .col input, .col textarea{
+  width: 100%;
   height: 32px;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #12355B;
   opacity: 0.2;
+}
+input[type=checkbox]{
+  width: 10px;
 }
 button {
   background-color: #5832DA;

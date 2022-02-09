@@ -15,6 +15,15 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+<<<<<<< HEAD
+=======
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "4.11.2",
+    "@mui/icons-material": "^5.3.0",
+    "@mui/material": "^5.3.0",
+    "@mui/styled-engine-sc": "^5.3.0",
+    "@mui/styles": "^5.4.1",
+>>>>>>> 405e831 (Mobile Responsive Pages)
     "@reach/accordion": "^0.16.1",
     "@redq/reuse-modal": "^1.1.9",
     "@styled-system/theme-get": "^5.1.2",
