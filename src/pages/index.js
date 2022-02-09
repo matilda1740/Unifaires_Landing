@@ -3,7 +3,6 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { theme } from "common/theme/appCreative";
 import ResetCSS from "common/assets/css/style";
-import Navbar from "components/LandingPage/Navbar";
 import Banner from "components/LandingPage/Banner";
 import KeyFeatures from "components/LandingPage/KeyFeatures";
 import CourseSection from "components/LandingPage/CourseSection";
@@ -15,13 +14,15 @@ import PopularInstructurs from "components/LandingPage/PopularInstructurs";
 import TrustedBy from "components/LandingPage/TrustedBy";
 import ExploreSection from "components/LandingPage/ExploreSection";
 import Footer from "components/LandingPage/Footer";
+import { DrawerProvider } from "common/contexts/DrawerContext";
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
 } from "components/LandingPage/landingPageStyles";
 import SalesSection from "components/LandingPage/SalesSection";
+import Navbar from "components/LandingPage/NavBar";
 
-export default function AppCreative() {
+export default function LandingPage() {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
@@ -55,7 +56,9 @@ export default function AppCreative() {
 
         {/* start app creative landing */}
         <AppWrapper>
-          <Navbar />
+          <DrawerProvider>
+            <Navbar />
+          </DrawerProvider>
           <ContentWrapper>
             <Banner />
             <KeyFeatures />
@@ -64,7 +67,9 @@ export default function AppCreative() {
             <ProSection />
             <PopularTopics />
             <DiverseSection />
+
             <PopularInstructurs />
+
             <TrustedBy />
             <InDemandJob />
             <SalesSection />

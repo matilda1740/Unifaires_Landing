@@ -1,6 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
+import Link from "next/link";
 
 const ColoredText = styled.span``;
 
@@ -11,6 +12,11 @@ const FlexContainer = styled.div`
   flex-direction: column;
   height: 800px;
   z-index: 3;
+  @media screen and (max-width: 480px) {
+    .banner-btn {
+      margin-top: 50px;
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -31,6 +37,10 @@ const Button = styled.button`
     color: white;
     border: 1px solid white;
   }
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: -100px;
+  }
 `;
 
 const Banner = () => {
@@ -49,7 +59,9 @@ const Banner = () => {
                 </Fade>
                 <div className="banner-btn">
                   <Fade left delay={200}>
-                    <Button>Get in Touch</Button>
+                    <Link href="/contact">
+                      <Button>Get in Touch</Button>
+                    </Link>
                   </Fade>
                 </div>
               </FlexContainer>

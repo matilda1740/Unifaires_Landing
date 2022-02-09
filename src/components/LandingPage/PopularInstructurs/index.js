@@ -1,5 +1,4 @@
 import React from "react";
-import SectionWrapper from "./faq.style";
 import styled from "styled-components";
 import NextImage from "common/components/NextImage";
 
@@ -7,6 +6,7 @@ import Instructor from "../../../public/images/instructor.svg";
 import Ratings from "../../../public/images/ratings.svg";
 import OnlineSvg from "../../../public/images/OnlineSvg.svg";
 import Adoption from "../../../public/images/adoptionImage.svg";
+import { Heading, HeadingText, Text } from "common/style";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -22,28 +22,6 @@ const Flex = styled.div`
   justify-content: space-around;
   margin-top: -100px;
 `;
-const Heading = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  display: flex;
-  align-items: center;
-  opacity: 0.9;
-  font-size: 45px;
-  line-height: 125%;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -53,9 +31,14 @@ const Wrapper = styled.div`
     gap: 20px;
   }
   @media (max-width: 800px) {
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 40px;
+    padding-top: 120px;
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      width: 0; /* Remove scrollbar space */
+      background: transparent; /* Optional: just make scrollbar invisible */
+    }
   }
 `;
 
@@ -114,6 +97,7 @@ const BoxText = styled.p`
   opacity: 0.9;
 `;
 const RatingSection = styled.div`
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,6 +109,7 @@ const RatingHeader = styled.p`
   font-size: 40px;
   align-text: center;
   color: #12355b;
+  margin-bottom: -2px;
 `;
 const BoxRightText = styled(BoxText)`
   font-size: 14px;
@@ -132,103 +117,101 @@ const BoxRightText = styled(BoxText)`
 `;
 const PopularInstructurs = () => {
   return (
-    <SectionWrapper>
-      <ContainerStyle className=" pb-100 container">
-        <HeadingText>Popular Instructors</HeadingText>
-        <FlexContainer>
-          <>
-            <Heading>
-              The people that are making the most impact on Unifaires at the
-              moment
-            </Heading>
-          </>
-          <Text>
-            See all <i class="ri-arrow-right-s-line"></i>
-          </Text>
-        </FlexContainer>
-        <Wrapper>
-          <Box>
-            <Flex>
-              <NextImage src={Instructor} alt="image" />
-              <RatingSection>
-                <RatingHeader> 4.6</RatingHeader>
-                <NextImage src={Ratings} alt="image" />
-              </RatingSection>
-            </Flex>
-            <InnerWrapper>
-              <BoxHeader> Simon Mudessar</BoxHeader>
-              <BoxText>
-                Teaches Construction Estimation, AutoCAD, Structural support
-              </BoxText>
-            </InnerWrapper>
-            <FooterWrapper>
-              <LeftInnerWrapper>
-                <NextImage src={OnlineSvg} alt="image" />
-                <BoxText> 12 Courses</BoxText>
-              </LeftInnerWrapper>
-              {/* right */}
-              <RightInnerWrapper>
-                <NextImage src={Adoption} alt="image" />
-                <BoxRightText> 4.5K+ Registered</BoxRightText>
-              </RightInnerWrapper>
-            </FooterWrapper>
-          </Box>
-          <Box>
-            <Flex>
-              <NextImage src={Instructor} alt="image" />
-              <RatingSection>
-                <RatingHeader> 4.6</RatingHeader>
-                <NextImage src={Ratings} alt="image" />
-              </RatingSection>
-            </Flex>
-            <InnerWrapper>
-              <BoxHeader> Simon Mudessar</BoxHeader>
-              <BoxText>
-                Teaches Construction Estimation, AutoCAD, Structural support
-              </BoxText>
-            </InnerWrapper>
-            <FooterWrapper>
-              <LeftInnerWrapper>
-                <NextImage src={OnlineSvg} alt="image" />
-                <BoxText> 12 Courses</BoxText>
-              </LeftInnerWrapper>
-              {/* right */}
-              <RightInnerWrapper>
-                <NextImage src={Adoption} alt="image" />
-                <BoxRightText> 4.5K+ Registered</BoxRightText>
-              </RightInnerWrapper>
-            </FooterWrapper>
-          </Box>
-          <Box>
-            <Flex>
-              <NextImage src={Instructor} alt="image" />
-              <RatingSection>
-                <RatingHeader> 4.6</RatingHeader>
-                <NextImage src={Ratings} alt="image" />
-              </RatingSection>
-            </Flex>
-            <InnerWrapper>
-              <BoxHeader>Simon Mudessar</BoxHeader>
+    <ContainerStyle className=" ptb-100 container">
+      <HeadingText>Popular Instructors</HeadingText>
+      <FlexContainer>
+        <>
+          <Heading>
+            The people that are making the most impact on Unifaires at the
+            moment
+          </Heading>
+        </>
+        <Text>
+          See all <i class="ri-arrow-right-s-line"></i>
+        </Text>
+      </FlexContainer>
+      <Wrapper>
+        <Box>
+          <Flex>
+            <NextImage src={Instructor} alt="image" />
+            <RatingSection>
+              <RatingHeader> 4.6</RatingHeader>
+              <NextImage src={Ratings} alt="image" />
+            </RatingSection>
+          </Flex>
+          <InnerWrapper>
+            <BoxHeader> Simon Mudessar</BoxHeader>
+            <BoxText>
+              Teaches Construction Estimation, AutoCAD, Structural support
+            </BoxText>
+          </InnerWrapper>
+          <FooterWrapper>
+            <LeftInnerWrapper>
+              <NextImage src={OnlineSvg} alt="image" />
+              <BoxText> 12 Courses</BoxText>
+            </LeftInnerWrapper>
+            {/* right */}
+            <RightInnerWrapper>
+              <NextImage src={Adoption} alt="image" />
+              <BoxRightText> 4.5K+ Registered</BoxRightText>
+            </RightInnerWrapper>
+          </FooterWrapper>
+        </Box>
+        <Box>
+          <Flex>
+            <NextImage src={Instructor} alt="image" />
+            <RatingSection>
+              <RatingHeader> 4.6</RatingHeader>
+              <NextImage src={Ratings} alt="image" />
+            </RatingSection>
+          </Flex>
+          <InnerWrapper>
+            <BoxHeader> Simon Mudessar</BoxHeader>
+            <BoxText>
+              Teaches Construction Estimation, AutoCAD, Structural support
+            </BoxText>
+          </InnerWrapper>
+          <FooterWrapper>
+            <LeftInnerWrapper>
+              <NextImage src={OnlineSvg} alt="image" />
+              <BoxText> 12 Courses</BoxText>
+            </LeftInnerWrapper>
+            {/* right */}
+            <RightInnerWrapper>
+              <NextImage src={Adoption} alt="image" />
+              <BoxRightText> 4.5K+ Registered</BoxRightText>
+            </RightInnerWrapper>
+          </FooterWrapper>
+        </Box>
+        <Box>
+          <Flex>
+            <NextImage src={Instructor} alt="image" />
+            <RatingSection>
+              <RatingHeader> 4.6</RatingHeader>
+              <NextImage src={Ratings} alt="image" />
+            </RatingSection>
+          </Flex>
+          <InnerWrapper>
+            <BoxHeader>Simon Mudessar</BoxHeader>
 
-              <BoxText>
-                Teaches Construction Estimation, AutoCAD, Structural support
-              </BoxText>
-            </InnerWrapper>
-            <FooterWrapper>
-              <LeftInnerWrapper>
-                <NextImage src={OnlineSvg} alt="image" />
-                <BoxText> 12 Courses</BoxText>
-              </LeftInnerWrapper>
-              {/* right */}
-              <RightInnerWrapper>
-                <NextImage src={Adoption} alt="image" />
-                <BoxRightText> 4.5K+ Registered</BoxRightText>
-              </RightInnerWrapper>
-            </FooterWrapper>
-          </Box>
-        </Wrapper>
-      </ContainerStyle>
-    </SectionWrapper>
+            <BoxText>
+              Teaches Construction Estimation, AutoCAD, Structural support
+            </BoxText>
+          </InnerWrapper>
+          <FooterWrapper>
+            <LeftInnerWrapper>
+              <NextImage src={OnlineSvg} alt="image" />
+              <BoxText> 12 Courses</BoxText>
+            </LeftInnerWrapper>
+            {/* right */}
+            <RightInnerWrapper>
+              <NextImage src={Adoption} alt="image" />
+              <BoxRightText> 4.5K+ Registered</BoxRightText>
+            </RightInnerWrapper>
+          </FooterWrapper>
+        </Box>
+      </Wrapper>
+    </ContainerStyle>
   );
 };
 

@@ -4,12 +4,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import NextImage from "common/components/NextImage";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
-
-// Icons
-import CardOne from "../../../public/images/cardone.svg";
-import Adoption from "../../../public/images/adoptionImage.svg";
-import CardTwo from "../../../public/images/cardtwo.svg";
-import CardThree from "../../../public/images/cardthree.svg";
+import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
   loop: true,
@@ -52,42 +47,29 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `;
 const Flex = styled.div`
-  display: flex;
+  @media screen and (max-width: 768px) {
+  }
 `;
-const Icon = styled.img`
-  min-width: 384px;
-`;
-const Brands = styled.img``;
-const Heading = styled.p`
-  font-size: 20px;
+const FlexBox = styled.div`
   display: flex;
   align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  opacity: 0.9;
-  font-size: 45px;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
-`;
-
-const TopWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  margin-top: 50px;
+  justify-content: center;
+  margin-left: 10px;
+  min-height: 540px;
+  margin-right: 10px;
+  @media screen and (max-width: 768px) and (min-height: 400px) {
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 480px) {
+  }
 `;
 
 const Box = styled.div`
   min-width: 370px;
   min-height: 336px;
+  @media screen and (max-width: 768px) {
+    width: 384px;
+  }
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.75),
@@ -147,13 +129,7 @@ const BoxHeader = styled.p`
   align-items: center;
   color: rgba(88, 50, 218, 1);
 `;
-const BoxSubheader = styled(BoxHeader)`
-  color: #b8bcca;
-  opacity: 0.5;
-`;
-const SpanStyle = styled(BoxHeader)`
-  color: #12355b;
-`;
+
 const BoxText = styled.p`
   font-size: 16px;
   line-height: 150%;
@@ -209,7 +185,7 @@ const DiverseSection = () => {
   }, []);
 
   return (
-    <ContainerStyle className=" pb-100 container">
+    <ContainerStyle className=" pt-30 container">
       <HeadingText>A diverse selection of courses</HeadingText>
       <Fade up delay={100}>
         <FlexContainer>
@@ -228,100 +204,109 @@ const DiverseSection = () => {
       <div className="trending-slider   pt-45">
         {display ? (
           <OwlCarousel {...options}>
-            <Box>
-              <Flex>
-                <NextImage src={CardOne} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Oxford University</BoxButton>
-                <BoxHeader> Philosophy and Theology</BoxHeader>
-                <BoxText>
-                  Philosophy and Theology brings together some of the most
-                  important approaches to understanding and assessing the
-                  intellectual claims of religion.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <AdoptionText>5K+ Registered</AdoptionText>
-                  <NextImage src={Adoption} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </Box>
+            <FlexBox>
+              <Box>
+                <Flex>
+                  <img src="./images/cardone.svg" alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Oxford University</BoxButton>
+                  <BoxHeader> Philosophy and Theology</BoxHeader>
+                  <BoxText>
+                    Philosophy and Theology brings together some of the most
+                    important approaches to understanding and assessing the
+                    intellectual claims of religion.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <AdoptionText>5K+ Registered</AdoptionText>
+                    <img src="/images/adoptionImage.svg" alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </Box>
+            </FlexBox>
 
-            <BoxTwo>
-              <Flex>
-                <NextImage src={CardTwo} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Oxford University</BoxButton>
-                <BoxHeader>Data Science for IoT</BoxHeader>
-                <BoxText>
-                  Philosophy and Theology brings together some of the most
-                  important approaches to understanding and assessing the
-                  intellectual claims of religion.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <AdoptionText>5K+ Registered</AdoptionText>
-                  <NextImage src={Adoption} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxTwo>
+            <FlexBox>
+              <BoxTwo>
+                <Flex>
+                  <img src="./images/cardtwo.svg" alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Oxford University</BoxButton>
+                  <BoxHeader>Data Science for IoT</BoxHeader>
+                  <BoxText>
+                    Philosophy and Theology brings together some of the most
+                    important approaches to understanding and assessing the
+                    intellectual claims of religion.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <AdoptionText>5K+ Registered</AdoptionText>
+                    <img src="/images/adoptionImage.svg" alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxTwo>
+            </FlexBox>
 
-            <BoxThree>
-              <Flex>
-                <NextImage src={CardThree} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Sewanee University</BoxButton>
-                <BoxHeader> Anthropology in the 21st Century</BoxHeader>
-                <BoxText>
-                  Examine human-environmental relationships from the
-                  anthropological perspective considering theoretical approaches
-                  and practical applications will be supplemented.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <AdoptionText>5K+ Registered</AdoptionText>
-                  <NextImage src={Adoption} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxThree>
-            <BoxThree>
-              <Flex>
-                <NextImage src={CardThree} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Sewanee University</BoxButton>
-                <BoxHeader> Anthropology in the 21st Century</BoxHeader>
-                <BoxText>
-                  Examine human-environmental relationships from the
-                  anthropological perspective considering theoretical approaches
-                  and practical applications will be supplemented.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <AdoptionText>5K+ Registered</AdoptionText>
-                  <NextImage src={Adoption} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxThree>
+            <FlexBox>
+              <BoxThree>
+                <Flex>
+                  <img src="./images/cardthree.svg" alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Sewanee University</BoxButton>
+                  <BoxHeader> Anthropology in the 21st Century</BoxHeader>
+                  <BoxText>
+                    Examine human-environmental relationships from the
+                    anthropological perspective considering theoretical
+                    approaches and practical applications will be supplemented.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <AdoptionText>5K+ Registered</AdoptionText>
+                    <img src="/images/adoptionImage.svg" alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxThree>
+            </FlexBox>
+
+            <FlexBox>
+              <BoxThree>
+                <Flex>
+                  <img src="./images/cardthree.svg" alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Sewanee University</BoxButton>
+                  <BoxHeader> Anthropology in the 21st Century</BoxHeader>
+                  <BoxText>
+                    Examine human-environmental relationships from the
+                    anthropological perspective considering theoretical
+                    approaches and practical applications will be supplemented.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <AdoptionText>5K+ Registered</AdoptionText>
+                    <img src="/images/adoptionImage.svg" alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxThree>
+            </FlexBox>
           </OwlCarousel>
         ) : (
           ""
